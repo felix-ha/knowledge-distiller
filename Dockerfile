@@ -17,4 +17,5 @@ RUN pytest
 RUN python -m pip install -e .
 RUN python -m kdistiller "Hello World!"
 
-CMD ["/bin/bash"]
+RUN chmod +x ./bin/test_release/release_testpypi.sh
+RUN chmod +x ./bin/release/release_pypi.sh

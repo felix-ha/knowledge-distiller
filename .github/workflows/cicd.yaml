@@ -82,19 +82,19 @@ jobs:
         run: docker push felixhau/knowledge-distiller:${GITHUB_REF_NAME#v}
 
       - name: Create .pypirc
-      run: |
-        rm ./bin/.pypirc
-        touch ./bin/.pypirc
-        echo "
-        [pypi]
-        username = __token__
-        password = ${{ secrets.PYPI_TOKEN }}
+        run: |
+          rm ./bin/.pypirc
+          touch ./bin/.pypirc
+          echo "
+          [pypi]
+          username = __token__
+          password = ${{ secrets.PYPI_TOKEN }}
 
-        [testpypi]
-        username = __token__
-        password = ${{ secrets.TEST_PYPI_TOKEN }}
-        " > ./bin/.pypirc
+          [testpypi]
+          username = __token__
+          password = ${{ secrets.TEST_PYPI_TOKEN }}
+          " > ./bin/.pypirc
 
       - name: Release PyPi
-      run:
-        make release
+        run:
+          make release

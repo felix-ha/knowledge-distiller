@@ -1,8 +1,12 @@
+#!/bin/bash
+
+set -e
+
 echo "releasing kdistiller"
 
 python -m build
 twine check dist/*
 
-mv /app/bin/release/.pypirc $HOME/.pypirc
+cp /app/bin/.pypirc $HOME/.pypirc
 
 twine upload -r pypi dist/*

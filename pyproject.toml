@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "knowledge-distiller"
-version = "0.0.2"
+version = "0.0.3"
 description = "Distilling knowledge from a ml model"
 readme = "README.md"
 authors = [{ name = "Felix Jobson", email = "felix.jobson@outlook.de" }]

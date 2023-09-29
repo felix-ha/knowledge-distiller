@@ -15,3 +15,7 @@ release: docker_build
 	docker exec kdistiller_release /bin/bash ./bin/release.sh
 	docker stop kdistiller_release
 	docker rm kdistiller_release
+
+.PHONY: docker_build_dev_container
+docker_build_dev_container:
+	docker build . -f .devcontainer/Dockerfile -t kdistiller-devcontainer

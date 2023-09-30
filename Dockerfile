@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . . 
 
 RUN pip install --upgrade pip
-RUN pip install -r requirements-dev.txt -f https://download.pytorch.org/whl/torch_stable.html  
+RUN pip install -r requirements-dev.txt
 
 ENV PYTHONPATH=".:src/"
 RUN pytest
